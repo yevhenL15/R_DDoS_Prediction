@@ -1,0 +1,67 @@
+
+> cat("=== ENHANCED LOGISTIC REGRESSION MODEL ===\n\n")
+=== ENHANCED LOGISTIC REGRESSION MODEL ===
+
+
+> cat("Features used: All numeric features after correlation filtering\n")
+Features used: All numeric features after correlation filtering
+
+> cat("Cross-validation: 5-fold\n\n")
+Cross-validation: 5-fold
+
+
+> cat("=== MODEL SUMMARY ===\n\n")
+=== MODEL SUMMARY ===
+
+
+> print(model)
+Generalized Linear Model 
+
+169310 samples
+    34 predictor
+     2 classes: '0', '1' 
+
+No pre-processing
+Resampling: Cross-Validated (5 fold) 
+Summary of sample sizes: 135448, 135448, 135448, 135448, 135448 
+Resampling results:
+
+  Accuracy   Kappa    
+  0.9868171  0.9730782
+
+
+> cat("\n=== CONFUSION MATRIX ===\n\n")
+
+=== CONFUSION MATRIX ===
+
+
+> print(confMatrix)
+Confusion Matrix and Statistics
+
+          Reference
+Prediction     0     1
+         0 23708    30
+         1   721 31976
+                                          
+               Accuracy : 0.9867          
+                 95% CI : (0.9857, 0.9876)
+    No Information Rate : 0.5671          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.9728          
+                                          
+ Mcnemar's Test P-Value : < 2.2e-16       
+                                          
+            Sensitivity : 0.9705          
+            Specificity : 0.9991          
+         Pos Pred Value : 0.9987          
+         Neg Pred Value : 0.9779          
+             Prevalence : 0.4329          
+         Detection Rate : 0.4201          
+   Detection Prevalence : 0.4206          
+      Balanced Accuracy : 0.9848          
+                                          
+       'Positive' Class : 0               
+                                          
+
+> sink()

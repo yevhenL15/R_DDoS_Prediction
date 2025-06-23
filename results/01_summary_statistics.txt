@@ -1,0 +1,102 @@
+
+> cat("=== DATASET SUMMARY STATISTICS ===\n\n")
+=== DATASET SUMMARY STATISTICS ===
+
+
+> print(summary(data))
+ Destination.Port Flow.Duration       Total.Fwd.Packets  Total.Backward.Packets Total.Length.of.Fwd.Packets Total.Length.of.Bwd.Packets Fwd.Packet.Length.Max
+ Min.   :    0    Min.   :       -1   Min.   :   1.000   Min.   :   0.000       Min.   :     0.0            Min.   :      0             Min.   :    0.0      
+ 1st Qu.:   80    1st Qu.:    71180   1st Qu.:   2.000   1st Qu.:   1.000       1st Qu.:    26.0            1st Qu.:      0             1st Qu.:    6.0      
+ Median :   80    Median :  1452333   Median :   3.000   Median :   4.000       Median :    30.0            Median :    164             Median :   20.0      
+ Mean   : 8880    Mean   : 16241649   Mean   :   4.875   Mean   :   4.573       Mean   :   939.5            Mean   :   5960             Mean   :  538.5      
+ 3rd Qu.:   80    3rd Qu.:  8805237   3rd Qu.:   5.000   3rd Qu.:   5.000       3rd Qu.:    63.0            3rd Qu.:  11601             3rd Qu.:   34.0      
+ Max.   :65532    Max.   :119999937   Max.   :1932.000   Max.   :2942.000       Max.   :183012.0            Max.   :5172346             Max.   :11680.0      
+ Fwd.Packet.Length.Min Fwd.Packet.Length.Mean Fwd.Packet.Length.Std Bwd.Packet.Length.Max Bwd.Packet.Length.Min Bwd.Packet.Length.Mean Bwd.Packet.Length.Std
+ Min.   :   0.00       Min.   :   0.000       Min.   :   0.000      Min.   :    0         Min.   :   0.00       Min.   :   0.0         Min.   :   0.000     
+ 1st Qu.:   0.00       1st Qu.:   6.000       1st Qu.:   0.000      1st Qu.:    0         1st Qu.:   0.00       1st Qu.:   0.0         1st Qu.:   0.000     
+ Median :   0.00       Median :   8.667       Median :   5.302      Median :   99         Median :   0.00       Median :  92.0         Median :   2.449     
+ Mean   :  27.88       Mean   : 164.827       Mean   : 214.907      Mean   : 2736         Mean   :  16.72       Mean   : 890.5         Mean   :1230.173     
+ 3rd Qu.:   6.00       3rd Qu.:  32.000       3rd Qu.:  10.263      3rd Qu.: 5840         3rd Qu.:   6.00       3rd Qu.:1934.5         3rd Qu.:2436.833     
+ Max.   :1472.00       Max.   :3867.000       Max.   :6692.645      Max.   :11680         Max.   :1460.00       Max.   :5800.5         Max.   :8194.660     
+ Flow.IAT.Mean        Flow.IAT.Std       Flow.IAT.Max        Flow.IAT.Min       Fwd.IAT.Total        Fwd.IAT.Mean        Fwd.IAT.Std        Fwd.IAT.Max       
+ Min.   :       -1   Min.   :       0   Min.   :       -1   Min.   :      -12   Min.   :        0   Min.   :        0   Min.   :       0   Min.   :        0  
+ 1st Qu.:    19182   1st Qu.:   19104   1st Qu.:    61178   1st Qu.:        1   1st Qu.:      129   1st Qu.:      110   1st Qu.:       0   1st Qu.:      124  
+ Median :   224517   Median :  564168   Median :  1422624   Median :        3   Median :    23710   Median :    10329   Median :   12735   Median :    23028  
+ Mean   :  1580587   Mean   : 4248569   Mean   : 13489774   Mean   :    28119   Mean   : 15396523   Mean   :  2540610   Mean   : 5195207   Mean   : 12994339  
+ 3rd Qu.:  2013459   3rd Qu.: 4033232   3rd Qu.:  8358910   3rd Qu.:       39   3rd Qu.:  7869855   3rd Qu.:  2017643   3rd Qu.: 3680321   3rd Qu.:  7548056  
+ Max.   :107000000   Max.   :69200000   Max.   :120000000   Max.   :107000000   Max.   :120000000   Max.   :120000000   Max.   :76700000   Max.   :120000000  
+  Fwd.IAT.Min        Bwd.IAT.Total        Bwd.IAT.Mean        Bwd.IAT.Std        Bwd.IAT.Max         Bwd.IAT.Min        Fwd.PSH.Flags     Fwd.Header.Length
+ Min.   :      -12   Min.   :        0   Min.   :        0   Min.   :       0   Min.   :        0   Min.   :        0   Min.   :0.00000   Min.   :    0.0  
+ 1st Qu.:        1   1st Qu.:        0   1st Qu.:        0   1st Qu.:       0   1st Qu.:        0   1st Qu.:        0   1st Qu.:0.00000   1st Qu.:   64.0  
+ Median :        4   Median :    41101   Median :    10009   Median :   14704   Median :    33365   Median :        3   Median :0.00000   Median :   72.0  
+ Mean   :   207370   Mean   :  6564701   Mean   :   947632   Mean   : 1610306   Mean   :  4567514   Mean   :   225782   Mean   :0.03322   Mean   :  111.5  
+ 3rd Qu.:      122   3rd Qu.:  1111677   3rd Qu.:   265584   3rd Qu.:  517792   3rd Qu.:  1094045   3rd Qu.:       47   3rd Qu.:0.00000   3rd Qu.:  100.0  
+ Max.   :120000000   Max.   :120000000   Max.   :120000000   Max.   :76700000   Max.   :120000000   Max.   :120000000   Max.   :1.00000   Max.   :39396.0  
+ Bwd.Header.Length Fwd.Packets.s       Bwd.Packets.s       Min.Packet.Length Max.Packet.Length Packet.Length.Mean Packet.Length.Std Packet.Length.Variance
+ Min.   :    0.0   Min.   :      0.0   Min.   :      0.0   Min.   :  0.000   Min.   :    0     Min.   :   0.0     Min.   :   0      Min.   :       0      
+ 1st Qu.:   20.0   1st Qu.:      0.4   1st Qu.:      0.0   1st Qu.:  0.000   1st Qu.:    6     1st Qu.:   6.0     1st Qu.:   0      1st Qu.:       0      
+ Median :   92.0   Median :      2.3   Median :      1.5   Median :  0.000   Median :  513     Median : 110.3     Median : 154      Median :   23725      
+ Mean   :  106.8   Mean   :  12615.1   Mean   :   1641.7   Mean   :  8.073   Mean   : 3226     Mean   : 515.0     Mean   :1086      Mean   : 2789906      
+ 3rd Qu.:  120.0   3rd Qu.:     32.9   3rd Qu.:     21.0   3rd Qu.:  6.000   3rd Qu.: 5840     3rd Qu.:1162.7     3rd Qu.:2132      3rd Qu.: 4544874      
+ Max.   :58852.0   Max.   :3000000.0   Max.   :2000000.0   Max.   :337.000   Max.   :11680     Max.   :1936.8     Max.   :4732      Max.   :22400000      
+ FIN.Flag.Count     SYN.Flag.Count    RST.Flag.Count      PSH.Flag.Count   ACK.Flag.Count   URG.Flag.Count   ECE.Flag.Count      Down.Up.Ratio  
+ Min.   :0.000000   Min.   :0.00000   Min.   :0.0000000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000000   Min.   :0.000  
+ 1st Qu.:0.000000   1st Qu.:0.00000   1st Qu.:0.0000000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000000   1st Qu.:0.000  
+ Median :0.000000   Median :0.00000   Median :0.0000000   Median :0.0000   Median :1.0000   Median :0.0000   Median :0.0000000   Median :1.000  
+ Mean   :0.002671   Mean   :0.03322   Mean   :0.0001196   Mean   :0.3512   Mean   :0.5045   Mean   :0.1408   Mean   :0.0001196   Mean   :1.006  
+ 3rd Qu.:0.000000   3rd Qu.:0.00000   3rd Qu.:0.0000000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.0000   3rd Qu.:0.0000000   3rd Qu.:1.000  
+ Max.   :1.000000   Max.   :1.00000   Max.   :1.0000000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000000   Max.   :7.000  
+ Average.Packet.Size Avg.Fwd.Segment.Size Avg.Bwd.Segment.Size Fwd.Header.Length.1 Subflow.Fwd.Packets Subflow.Fwd.Bytes  Subflow.Bwd.Packets Subflow.Bwd.Bytes
+ Min.   :   0.0      Min.   :   0.000     Min.   :   0.0       Min.   :    0.0     Min.   :   1.000    Min.   :     0.0   Min.   :   0.000    Min.   :      0  
+ 1st Qu.:   7.5      1st Qu.:   6.000     1st Qu.:   0.0       1st Qu.:   64.0     1st Qu.:   2.000    1st Qu.:    26.0   1st Qu.:   1.000    1st Qu.:      0  
+ Median : 141.0      Median :   8.667     Median :  92.0       Median :   72.0     Median :   3.000    Median :    30.0   Median :   4.000    Median :    164  
+ Mean   : 574.6      Mean   : 164.827     Mean   : 890.5       Mean   :  111.5     Mean   :   4.875    Mean   :   939.5   Mean   :   4.573    Mean   :   5960  
+ 3rd Qu.:1291.9      3rd Qu.:  32.000     3rd Qu.:1934.5       3rd Qu.:  100.0     3rd Qu.:   5.000    3rd Qu.:    63.0   3rd Qu.:   5.000    3rd Qu.:  11601  
+ Max.   :2528.0      Max.   :3867.000     Max.   :5800.5       Max.   :39396.0     Max.   :1932.000    Max.   :183012.0   Max.   :2942.000    Max.   :5172346  
+ Init_Win_bytes_forward Init_Win_bytes_backward act_data_pkt_fwd   min_seg_size_forward  Active.Mean          Active.Std         Active.Max       
+ Min.   :   -1          Min.   :   -1           Min.   :   0.000   Min.   : 0.00        Min.   :        0   Min.   :       0   Min.   :        0  
+ 1st Qu.:  229          1st Qu.:   -1           1st Qu.:   1.000   1st Qu.:20.00        1st Qu.:        0   1st Qu.:       0   1st Qu.:        0  
+ Median :  256          Median :  126           Median :   2.000   Median :20.00        Median :        0   Median :       0   Median :        0  
+ Mean   : 4247          Mean   :  601           Mean   :   3.312   Mean   :21.48        Mean   :   184826   Mean   :   12934   Mean   :   208085  
+ 3rd Qu.: 8192          3rd Qu.:  229           3rd Qu.:   4.000   3rd Qu.:20.00        3rd Qu.:     1878   3rd Qu.:       0   3rd Qu.:     1878  
+ Max.   :65535          Max.   :65535           Max.   :1931.000   Max.   :52.00        Max.   :100000000   Max.   :39500000   Max.   :100000000  
+   Active.Min          Idle.Mean            Idle.Std           Idle.Max            Idle.Min         Label     
+ Min.   :        0   Min.   :        0   Min.   :       0   Min.   :        0   Min.   :        0   0: 97718  
+ 1st Qu.:        0   1st Qu.:        0   1st Qu.:       0   1st Qu.:        0   1st Qu.:        0   1:128027  
+ Median :        0   Median :        0   Median :       0   Median :        0   Median :        0             
+ Mean   :   177620   Mean   : 10322143   Mean   : 3611943   Mean   : 12878129   Mean   :  7755355             
+ 3rd Qu.:     1862   3rd Qu.:  8239725   3rd Qu.:       0   3rd Qu.:  8253838   3rd Qu.:  7422849             
+ Max.   :100000000   Max.   :120000000   Max.   :65300000   Max.   :120000000   Max.   :120000000             
+
+> cat("\n=== MISSING VALUES ANALYSIS ===\n\n")
+
+=== MISSING VALUES ANALYSIS ===
+
+
+> print(missing_values)
+              Flow.Duration           Total.Fwd.Packets      Total.Backward.Packets Total.Length.of.Fwd.Packets Total.Length.of.Bwd.Packets 
+                          0                           0                           0                           0                           0 
+      Fwd.Packet.Length.Max       Bwd.Packet.Length.Max                Fwd.IAT.Mean                Bwd.IAT.Mean                       Label 
+                          0                           0                           0                           0                           0 
+
+> cat("\n=== TRAFFIC DISTRIBUTION ===\n\n")
+
+=== TRAFFIC DISTRIBUTION ===
+
+
+> print(table(data$Label))
+
+     0      1 
+ 97718 128027 
+
+> cat("\n=== TRAFFIC PERCENTAGES ===\n\n")
+
+=== TRAFFIC PERCENTAGES ===
+
+
+> print(prop.table(table(data$Label)) * 100)
+
+       0        1 
+43.28689 56.71311 
+
+> sink()

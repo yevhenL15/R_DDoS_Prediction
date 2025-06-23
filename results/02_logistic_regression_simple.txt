@@ -1,0 +1,98 @@
+
+> cat("=== SIMPLE LOGISTIC REGRESSION MODEL ===\n\n")
+=== SIMPLE LOGISTIC REGRESSION MODEL ===
+
+
+> cat("Model Formula: Label ~ Bwd.Packet.Length.Max + Fwd.Packet.Length.Max + Total.Length.of.Fwd.Packets\n\n")
+Model Formula: Label ~ Bwd.Packet.Length.Max + Fwd.Packet.Length.Max + Total.Length.of.Fwd.Packets
+
+
+> print(summary(model))
+
+Call:
+NULL
+
+Coefficients:
+                          Estimate Std. Error    z value Pr(>|z|)    
+(Intercept)             -1.137e+15  1.735e+06 -6.554e+08   <2e-16 ***
+Destination.Port        -4.980e+10  1.694e+01 -2.940e+09   <2e-16 ***
+Fwd.Packet.Length.Min    1.435e+12  1.465e+03  9.801e+08   <2e-16 ***
+Fwd.Packet.Length.Std   -1.002e+12  7.266e+02 -1.379e+09   <2e-16 ***
+Bwd.Packet.Length.Min   -9.182e+11  4.863e+03 -1.888e+08   <2e-16 ***
+Bwd.Packet.Length.Std   -6.636e+11  6.305e+02 -1.052e+09   <2e-16 ***
+Flow.IAT.Mean            4.001e+08  2.613e-01  1.531e+09   <2e-16 ***
+Flow.IAT.Min            -3.897e+08  3.266e-01 -1.193e+09   <2e-16 ***
+Fwd.IAT.Total           -3.252e+07  4.737e-02 -6.866e+08   <2e-16 ***
+Fwd.IAT.Min              3.258e+07  1.203e-01  2.708e+08   <2e-16 ***
+Bwd.IAT.Total            2.055e+07  5.137e-02  3.999e+08   <2e-16 ***
+Bwd.IAT.Mean            -2.030e+08  1.148e-01 -1.769e+09   <2e-16 ***
+Bwd.IAT.Std              4.253e+07  1.500e-01  2.834e+08   <2e-16 ***
+Fwd.PSH.Flags           -2.402e+15  1.313e+06 -1.829e+09   <2e-16 ***
+Fwd.Packets.s           -1.806e+09  1.643e+00 -1.100e+09   <2e-16 ***
+Bwd.Packets.s            7.709e+08  8.155e+00  9.453e+07   <2e-16 ***
+Min.Packet.Length       -1.327e+13  2.453e+04 -5.412e+08   <2e-16 ***
+Packet.Length.Variance   2.192e+08  1.987e-01  1.104e+09   <2e-16 ***
+FIN.Flag.Count          -8.316e+14  3.303e+06 -2.518e+08   <2e-16 ***
+RST.Flag.Count          -1.239e+15  1.436e+07 -8.627e+07   <2e-16 ***
+PSH.Flag.Count           1.491e+14  1.466e+06  1.017e+08   <2e-16 ***
+ACK.Flag.Count           1.974e+15  1.108e+06  1.781e+09   <2e-16 ***
+URG.Flag.Count          -1.137e+15  1.238e+06 -9.185e+08   <2e-16 ***
+Down.Up.Ratio           -3.417e+14  2.344e+05 -1.458e+09   <2e-16 ***
+Average.Packet.Size      3.203e+12  1.009e+03  3.175e+09   <2e-16 ***
+Subflow.Fwd.Bytes       -2.925e+10  1.040e+02 -2.813e+08   <2e-16 ***
+Subflow.Bwd.Bytes       -8.163e+09  8.041e+00 -1.015e+09   <2e-16 ***
+Init_Win_bytes_forward  -9.459e+10  2.828e+01 -3.345e+09   <2e-16 ***
+Init_Win_bytes_backward  7.863e+09  3.953e+01  1.989e+08   <2e-16 ***
+act_data_pkt_fwd         1.044e+13  2.919e+04  3.576e+08   <2e-16 ***
+min_seg_size_forward    -1.741e+13  4.930e+04 -3.532e+08   <2e-16 ***
+Active.Std              -1.881e+08  8.083e-01 -2.327e+08   <2e-16 ***
+Active.Min               3.282e+07  3.002e-01  1.093e+08   <2e-16 ***
+Idle.Std                 2.358e+07  7.242e-02  3.256e+08   <2e-16 ***
+Idle.Min                 9.292e+06  4.805e-02  1.934e+08   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 231652  on 169309  degrees of freedom
+Residual deviance: 163854  on 169275  degrees of freedom
+AIC: 163924
+
+Number of Fisher Scoring iterations: 25
+
+
+> cat("\n=== CONFUSION MATRIX ===\n\n")
+
+=== CONFUSION MATRIX ===
+
+
+> print(confusionMatrix)
+Confusion Matrix and Statistics
+
+          Reference
+Prediction     0     1
+         0 17004     7
+         1  7308 32117
+                                          
+               Accuracy : 0.8704          
+                 95% CI : (0.8676, 0.8731)
+    No Information Rate : 0.5692          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.7257          
+                                          
+ Mcnemar's Test P-Value : < 2.2e-16       
+                                          
+            Sensitivity : 0.6994          
+            Specificity : 0.9998          
+         Pos Pred Value : 0.9996          
+         Neg Pred Value : 0.8146          
+             Prevalence : 0.4308          
+         Detection Rate : 0.3013          
+   Detection Prevalence : 0.3014          
+      Balanced Accuracy : 0.8496          
+                                          
+       'Positive' Class : 0               
+                                          
+
+> sink()

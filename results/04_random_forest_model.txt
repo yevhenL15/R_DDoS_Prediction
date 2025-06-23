@@ -1,0 +1,78 @@
+
+> cat("=== RANDOM FOREST MODEL ===\n\n")
+=== RANDOM FOREST MODEL ===
+
+
+> cat("Model Parameters:\n")
+Model Parameters:
+
+> cat("- Number of trees: 500\n")
+- Number of trees: 500
+
+> cat("- mtry: 3\n")
+- mtry: 3
+
+> cat("- Features: Bwd.Packet.Length.Max + Fwd.Packet.Length.Max + Total.Length.of.Fwd.Packets\n\n")
+- Features: Bwd.Packet.Length.Max + Fwd.Packet.Length.Max + Total.Length.of.Fwd.Packets
+
+
+> print(rf_model)
+
+Call:
+ randomForest(formula = Label ~ Bwd.Packet.Length.Max + Fwd.Packet.Length.Max +      Total.Length.of.Fwd.Packets, data = trainData, ntree = 500,      mtry = 3, importance = TRUE) 
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 3
+
+        OOB estimate of  error rate: 0.1%
+Confusion matrix:
+      0     1  class.error
+0 73260    29 0.0003956938
+1   148 95873 0.0015413295
+
+> cat("\n=== FEATURE IMPORTANCE ===\n\n")
+
+=== FEATURE IMPORTANCE ===
+
+
+> print(importance(rf_model))
+                                    0         1 MeanDecreaseAccuracy MeanDecreaseGini
+Bwd.Packet.Length.Max        3.230251  43.95569             44.14894         93.83767
+Fwd.Packet.Length.Max       37.200742 127.80241            123.99453      47661.52649
+Total.Length.of.Fwd.Packets 75.858067 138.92496            156.86331      35061.17007
+
+> cat("\n=== CONFUSION MATRIX ===\n\n")
+
+=== CONFUSION MATRIX ===
+
+
+> print(rf_confusionMatrix)
+Confusion Matrix and Statistics
+
+          Reference
+Prediction     0     1
+         0 24417    60
+         1    12 31946
+                                         
+               Accuracy : 0.9987         
+                 95% CI : (0.9984, 0.999)
+    No Information Rate : 0.5671         
+    P-Value [Acc > NIR] : < 2.2e-16      
+                                         
+                  Kappa : 0.9974         
+                                         
+ Mcnemar's Test P-Value : 3.042e-08      
+                                         
+            Sensitivity : 0.9995         
+            Specificity : 0.9981         
+         Pos Pred Value : 0.9975         
+         Neg Pred Value : 0.9996         
+             Prevalence : 0.4329         
+         Detection Rate : 0.4327         
+   Detection Prevalence : 0.4337         
+      Balanced Accuracy : 0.9988         
+                                         
+       'Positive' Class : 0              
+                                         
+
+> sink()
